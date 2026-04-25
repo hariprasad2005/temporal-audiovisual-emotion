@@ -1,0 +1,53 @@
+# Data Configuration
+data:
+  audio_sr: 16000
+  image_size: 224
+  num_frames: 16
+  emotion_classes: ["happy", "sad", "angry", "surprise", "neutral"]
+  datasets:
+    crema_d:
+      path: "/path/to/crema-d"
+      audio_ext: ".wav"
+      video_ext: ".mp4"
+    ravdess:
+      path: "/path/to/ravdess" 
+      audio_ext: ".wav"
+      video_ext: ".mp4"
+    afew:
+      path: "/path/to/afew"
+      audio_ext: ".wav"
+      video_ext: ".avi"
+
+# Model Configuration
+model:
+  audio_backbone: "facebook/wav2vec2-base"
+  visual_backbone: "facebook/dinov2-small"
+  audio_dim: 768
+  visual_dim: 384
+  fusion_dim: 512
+  num_heads: 8
+  num_layers: 2
+  dropout: 0.1
+
+# Training Configuration
+training:
+  batch_size: 32
+  num_epochs: 50
+  learning_rate: 3e-4
+  weight_decay: 0.01
+  early_stopping_patience: 10
+  mixed_precision: true
+  gradient_clip: 1.0
+
+# Evaluation Configuration
+evaluation:
+  cross_dataset: true
+  save_confusion_matrix: true
+  save_embeddings: true
+
+# Paths
+paths:
+  output_dir: "./outputs"
+  model_dir: "./outputs/models"
+  log_dir: "./outputs/logs"
+  graph_dir: "./outputs/graphs"
