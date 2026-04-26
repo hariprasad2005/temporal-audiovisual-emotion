@@ -29,9 +29,3 @@ npm run dev
 ```
 
 4. Open the local URL shown by Vite.
-
-## Data Updates
-
-Edit values in:
-
-- `src/data/dashboardData.js`
