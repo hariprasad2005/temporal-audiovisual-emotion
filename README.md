@@ -21,7 +21,6 @@ This repository implements a complete audio-visual emotion recognition system ba
 - happy
 - sad
 - angry
-- surprise
 - neutral
 
 ## Installation
